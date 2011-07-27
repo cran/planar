@@ -93,6 +93,7 @@ Rcpp::List recursive_fresnel(const arma::colvec& k0,			\
   
   const arma::colvec& k02 = k0 % k0;
   const arma::cx_mat& kx2 = kx % kx;
+  const arma::cx_double I = arma::cx_double(0,1);
   
   // loop to calculate kiz
   arma::cx_cube kiz = arma::ones<arma::cx_cube>(Nlambda, Ntheta, Nlayer);

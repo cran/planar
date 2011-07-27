@@ -1,12 +1,12 @@
-d260db2b39cf80c1135f51c33447561a *DESCRIPTION
+fbf25f6777d6ec01073571884d9c1467 *DESCRIPTION
 3f7eeccf704d05ad2cecc485899e79e6 *NAMESPACE
-a73a434d76da60ac23aa64eec1115595 *NEWS
+e1e5203034a84028c5bf79b67a88a92e *NEWS
 181ee24fdaf2bc2e1574d92a7df1262a *R/dipole-GL.r
 026f45acb903827f85aa931f9ca99e17 *R/dipole-integrand.r
 d931f0152f5a4ab075b4aa3f57b72d27 *R/dipole.r
 cef85ab749c76a20249f91529283dcff *R/epsilon.r
 6b2b43cc6ac5fe1cefe906904ad98804 *R/multilayer.r
-d6c5e07daada776352f5ba9e8536e8e1 *R/planar-package.r
+5f3433e58e5868ab7562bcf3bd68d2b8 *R/planar-package.r
 22b1457f50b1d28e6878f73bcbaabdbf *R/radiationGrob.r
 2c12a36ccd60dd75a6d87e9334f1b0b0 *R/raman.r
 412ad19ab498447fb040ba4453278397 *R/recursive.fresnel.r
@@ -23,7 +23,7 @@ ef83260fd2bfd3cbe0264bec014e4733 *demo/LFIEF_distance.r
 b45498e6b7de3bcb3bbf51a1ce7b0c90 *demo/dispersion_kretschmann.r
 5a03fc6368dae09c9b4bf91ac157f388 *demo/dispersion_symmetric.r
 768434cd5a45b35d24b1e7b72587dd9b *demo/field_enhancement.r
-6fec367710f3d1582a7d2e6d62bc318c *demo/fluorescence_pattern.r
+88092b0f676a56ea585b86f01d952c05 *demo/fluorescence_pattern.r
 a838c6ab4e8801d917a32af08ccc62d8 *demo/integrated_fluorescence.r
 19e73a10c39bc8b9c9104f23f4796be3 *demo/kretschmann_angle_scan.r
 0ec6e74db1c5ec0e7ee5866c832078ea *demo/kretschmann_fluo_distance.r

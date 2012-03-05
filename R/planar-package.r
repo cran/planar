@@ -3,8 +3,8 @@
 ##' \tabular{ll}{
 ##' Package: \tab planar\cr
 ##' Type: \tab Package\cr
-##' Version: \tab 1.1\cr
-##' Date: \tab 2011-07-30\cr
+##' Version: \tab 1.0\cr
+##' Date: \tab 2011-01-31\cr
 ##' License: \tab GPL (>= 2)\cr
 ##' LazyLoad: \tab false\cr
 ##' }

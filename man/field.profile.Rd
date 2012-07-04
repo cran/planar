@@ -5,8 +5,7 @@
   field.profile(lambda = 500, theta = 0,
     polarisation = "p", thickness = c(0, 20, 140, 20, 0),
     dmax = 200, res = 1000,
-    epsilon = list(1^2, -12 + 1i, 1.38^2, -12 + 1i, 1.46^2),
-    ...)
+    epsilon = list(1^2, -12, 1.38^2, -12, 1.46^2), ...)
 }
 \arguments{
   \item{lambda}{wavelength}
@@ -42,7 +41,12 @@
 }
 \references{
   Principles of surface-enhanced Raman spectroscopy and
-  related plasmonic effects Eric C. Le Ru and Pablo G.
-  Etchegoin, published by Elsevier, Amsterdam (2009).
+  related plasmonic effects
+
+  Eric C. Le Ru and Pablo G. Etchegoin, published by
+  Elsevier, Amsterdam (2009).
+}
+\seealso{
+  Other helping_functions: \code{\link{invert_incidence}}
 }
 

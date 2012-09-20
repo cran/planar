@@ -11,7 +11,7 @@ Description: Solves the electromagnetic problem of reflection and
         the decay rates for a dipolar emitter near a multilayer
         structure.
 SystemRequirements: GNU make
-Version: 1.2.4
+Version: 1.2.4.1
 BuildVignettes: false
 Date: 2012-09-20
 Depends: methods, reshape2, Rcpp (>= 0.9.5), RcppArmadillo (>= 0.2.3),
@@ -23,6 +23,7 @@ Collate: 'dipole-GL.r' 'dipole-integrand.r' 'dipole.r' 'epsilon.r'
         'multilayer.r' 'planar-package.r' 'radiationGrob.r' 'raman.r'
         'recursive.fresnel.r' 'themes.r' 'transmission.fresnel.r'
         'utils.r' 'zzz.r'
-Packaged: 2012-09-19 21:37:04 UTC; auguieba
+Packaged: 2013-11-09 07:36:35 UTC; ripley
 Repository: CRAN
-Date/Publication: 2012-09-19 22:17:49
+Date/Publication: 2013-11-09 08:42:20
+NeedsCompilation: yes

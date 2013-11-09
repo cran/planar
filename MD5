@@ -1,4 +1,4 @@
-10ae99044b2e14f2cb01a5c9587369e1 *DESCRIPTION
+3a73a5432e29cf6d6393f6daab5b5694 *DESCRIPTION
 ab2f170f1d20f63faf384e54cf0bae2e *NAMESPACE
 c8a03e162ff530d9919fbbaa9eb9e751 *NEWS
 181ee24fdaf2bc2e1574d92a7df1262a *R/dipole-GL.r
@@ -65,4 +65,4 @@ dee89f5a1f3c1dad4b388e66ffa39921 *man/invert_stack.Rd
 47f1f4a1e32ce327ba3485cda338f5e6 *man/theme_minimal.Rd
 7f2ed4109434f9f92362172a5b0f34c4 *man/transmission.Rd
 ec5af5d7f028665551da319fba501e7e *src/Makevars
-c1584fc72d7314c86f421c5511561767 *src/multilayer.cpp
+22e68ee309ba2eadad5e9efcc41140ad *src/multilayer.cpp

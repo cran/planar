@@ -2,25 +2,25 @@
 \alias{transmission}
 \title{transmission}
 \usage{
-  transmission(nPrism, extAngle_r, polar = "p")
+transmission(n, external, polarisation = "p")
 }
 \arguments{
-  \item{nPrism}{prism refractive index}
+  \item{n}{prism refractive index}
 
-  \item{extAngle_r}{external incident angle in radians}
+  \item{external}{external incident angle in radians}
 
-  \item{polar}{polarisation}
+  \item{polarisation}{polarisation}
 }
 \value{
-  transmission
+transmission
 }
 \description{
-  transmission loss through a prism
+transmission loss through a prism
 }
 \details{
-  transmission loss through a prism
+transmission loss through a prism
 }
 \author{
-  baptiste Auguie
+baptiste Auguie
 }
 

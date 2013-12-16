@@ -1,10 +1,10 @@
-\name{multilayer}
-\alias{multilayer}
-\title{multilayer}
+\name{multilayercpp}
+\alias{multilayercpp}
+\title{multilayercpp}
 \usage{
-multilayer(wavelength = 2 * pi/k0, k0 = 2 * pi/wavelength,
+multilayercpp(wavelength = 2 * pi/k0, k0 = 2 * pi/wavelength,
   angle = asin(q), q = sin(angle), epsilon = list(incident = 1.5^2, 1.33),
-  thickness = c(0, 0), polarisation = c("p", "s"), d = 1, dout = d, ...)
+  thickness = c(0, 0), polarisation = c("p", "s"), ...)
 }
 \arguments{
   \item{wavelength}{[vector] wavelength in nm}
@@ -22,12 +22,6 @@ multilayer(wavelength = 2 * pi/k0, k0 = 2 * pi/wavelength,
   \item{thickness}{vector of N+2 layer thicknesses, first
   and last are dummy}
 
-  \item{d}{vector of distances where LFIEF are evaluated
-  from each interface}
-
-  \item{dout}{vector of distances where LFIEF are evaluated
-  outside the stack}
-
   \item{polarisation}{[character] switch between p- and s-
   polarisation}
 
@@ -42,12 +36,11 @@ Multilayer Fresnel coefficients
 \details{
 solves the EM problem of a multilayered interface
 }
+\examples{
+library(planar)
+demo(package="planar")
+}
 \author{
 baptiste Auguie
-}
-\references{
-Principles of surface-enhanced Raman spectroscopy and
-related plasmonic effects. Eric C. Le Ru and Pablo G.
-Etchegoin, published by Elsevier, Amsterdam (2009).
 }
 

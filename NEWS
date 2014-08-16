@@ -1,3 +1,22 @@
+planar 1.5.2
+
+NEW FEATURES
+
+* full field profile under gaussian beam illumination (reflection and transmission)
+
+* new functions multilayerfull and multilayer_field calculating internal field for a given incident field
+
+USER VISIBLE CHANGES:
+
+* slight changes to the interface of field_profile
+
+LOW LEVEL:
+
+* rewrote the gaussian beam code to use multilayer matrix transfer method
+
+* link to cubature at c++ level to perform the gaussian beam integration
+
+
 planar 1.5
 
 USER VISIBLE CHANGES:

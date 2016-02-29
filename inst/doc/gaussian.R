@@ -1,4 +1,3 @@
-
 ## ----demo, message=FALSE, echo=FALSE-------------------------------------
 library(knitr)
 
@@ -9,7 +8,6 @@ library(planar)
 library(ggplot2)
 library(grid)
 library(plyr)
-
 
 
 ## ----pw, message=FALSE, echo=FALSE, fig.cap="Evolution of the near-field profile as a function of beam waist. The electric field is calculated at a fixed distance of 1nm from the metal surface. The (average) incident angle is kept constant, corresponding to the condition of optimum coupling for plane-wave illumination."----
@@ -44,15 +42,14 @@ all <- mdply(params, simulation)
 
 ggplot(all, aes(x/w0/1000, field, group=w0, colour=factor(w0)))+
   geom_line() + 
-  geom_vline(aes(x=0,y=NULL),lty=2) +
-  geom_hline(aes(x=0,yintercept=maxi),lty=3) +
+  geom_vline(aes(xintercept=0),lty=2) +
+  geom_hline(aes(yintercept=maxi),lty=3) +
   annotate("text", label="plane-wave", y=maxi, x=-2.5, vjust=1, fontface="italic") +
   labs(x=expression(x/w[0]), y=expression("|E|"^2), 
        colour=expression(w[0]/mu*m)) +
   coord_cartesian(xlim=c(-5,5)) + theme_minimal()+
   guides(colour=guide_legend(reverse=TRUE)) +
-  theme(panel.background=element_rect(fill=NA))
-
+  theme(panel.border=element_rect(fill=NA))
 
 
 ## ----weeber, echo=FALSE, fig.cap="Simulation of the electric field in the Kretschmann-Raether configuration. A gold layer (n=0.180 + 5.12i) surrounded by glass (n=1.52) and air is illuminated with TM-polarised light from the glass side. The electric field is calculated as a function of position along the interface (x) at a distance of 50nm (top panel) and 100nm (bottom panel) from the interface. The dotted curves correspond to the same simulation without a gold film."----
@@ -95,14 +92,13 @@ ann <- ddply(all, "d", peak)
 ggplot(all, aes(x/1000, field))+ facet_grid(d~., scales="free")+
   geom_line()  +
   geom_line(data=bare, linetype="dotted") +
-  geom_vline(aes(x=0,y=NULL),lty=2) +
+  geom_vline(aes(xintercept=0),lty=2) +
   geom_blank(data=ann, aes(y=peaky*1.1, x=peakx)) +
   geom_text(data=ann, aes(label=peakl, y=peaky, x=peakx), hjust=0, vjust=0, fontface="italic") +
   scale_y_continuous(expand=c(0,0)) +
   labs(x=expression(x/mu*m), y=expression("(normalised) |E|"^2)) +
   guides(colour="none") +
   theme_minimal()+
-  theme(panel.background=element_rect(fill=NA)) +
+  theme(panel.border=element_rect(fill=NA)) +
   theme()
-
 

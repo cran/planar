@@ -1,3 +1,5 @@
+
+
 test_complex <- function (x) any(Im(x) != 0)
 
 is.metal <- function(x){
@@ -56,14 +58,17 @@ epsilon_label <- function(epsilon = list(3.5, 1, 3, 1, "epsAu", 3, 3.5),
 ##' @title epsilon_dispersion
 ##' @param epsilon list of real or complex values
 ##' @param wavelength numeric vector
+##' @param envir environment to look for functions
 ##' @return list
 ##' @export
 ##' @family utility
 ##' @author baptiste Auguie
-epsilon_dispersion <- function(epsilon, wavelength=seq(400, 1000)){
+epsilon_dispersion <- function(epsilon, wavelength=seq(400, 1000),
+                               envir = parent.frame()){
   dispersive <- sapply(epsilon, is.character)
   if(!any(dispersive)) return(as.list(epsilon))
-  replacement <- lapply(epsilon[dispersive], do.call, list(wavelength))
+  replacement <- lapply(epsilon[dispersive], 
+                        do.call, list(wavelength), envir = envir)
   epsilon[dispersive] <- lapply(replacement, "[[", "epsilon")
   epsilon
 }
@@ -116,19 +121,22 @@ Curry <- function (FUN, ...)
     function(...) do.call(FUN, c(.orig, list(...)))
 }
 
-##' Raman shift
+
+##' raman_shift
 ##'
-##' Raman shift conversion to absolute wavelength
-##' @title raman_shift
+##' converts Raman shift to wavelength
+##' @title sort_factor
+##' @param laser vector of laser wavelengths in nm
+##' @param shift vector of Raman shifts in cm-1
+##' @return matrix of shifted wavelengths (all combinations)
 ##' @export
-##' @param wavelength wavelength (nm)
-##' @param shift Raman shift (cm-1)
-##' @param stokes logical Stokes or Anti-Stokes
-##' @return wavelength of the Raman peak in nm
 ##' @author Baptiste Auguie
-raman_shift <- function(wavelength = 632.8, shift = 520, stokes = TRUE){
-
-  if(stokes) 1 / (1/wavelength - shift * 1e-7) else 
-    1 / (1/wavelength + shift * 1e-7)
-
+raman_shift <- function(laser=c(514, 632.8), shift = c(520, 610)){
+  
+  res <- as.matrix(
+    vapply(laser, function(lambda) 1 / (1 / lambda - shift *1e-7 ), shift))
+  rownames(res) <- as.character(shift)
+  colnames(res) <- as.character(laser)
+  res
+  
 }
